@@ -43,16 +43,23 @@ const TripDetail: React.FC<TripDetailProps> = ({ photos, trips, deletePhoto, set
       </h1>
 
       {/* 受け取った photos を表示 */}
-      <div>
+      <div className="grid grid-cols-2 gap-4">
         {filtered.map((photo) => (
-          <div key={photo.id} className="mb-6">
+          <div key={photo.id} className="
+          bg-white
+        rounded-xl
+        shadow
+        p-2
+        hover:shadow-lg
+        hover:scale-[1.01]
+        transition">
             <img
               src={photo.imageUrl}
               alt="旅の写真"
-              className="rounded mb-2"
+              className="w-full h-48 object-cover rounded mb-2"
             />
-            <p className="text-sm text-gray-600">{photo.date} {photo.time}</p>
-            <p className="text-base">{photo.memo}</p>
+            <p className="text-xs text-gray-600">{photo.date} {photo.time}</p>
+            <p className="text-sm">{photo.memo}</p>
             <button
               onClick={() => handleDelete(photo.id)}
               className="text-red-600 hover:text-red-800 ml-2">

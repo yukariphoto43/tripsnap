@@ -10,8 +10,17 @@ export interface TripCardProps {
 const TripCard: React.FC<TripCardProps> = ({ title, id }) => {
     return (
         <Link to={`/trip/${encodeURIComponent(id)}`}>
-            <div className="bg-white rounded-lg shadow-md p-4 mb-4 hover:shadow-lg transition-shadow cursor-pointer">
-                <h2 className="text-lg font-semibold">{title}</h2>
+            <div className="  bg-white 
+  rounded-xl 
+  shadow-md 
+  p-4 
+  mb-4 
+  hover:shadow-xl 
+  hover:scale-[1.02]
+  transition
+  cursor-pointer
+  border">
+                <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
                 <p className="text-sm text-gray-500">投稿数：{0}</p>
             </div>
         </Link>
